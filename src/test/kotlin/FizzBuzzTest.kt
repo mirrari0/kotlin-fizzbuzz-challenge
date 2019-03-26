@@ -14,14 +14,20 @@ class FizzBuzzTest: FizzBuzz {
         assertEquals("Fizz", getNumber(true, false, 3).fizzBuzz())
     }
 
+    @Test
+    fun `given multiple of five not three, returns buzz`() {
+        assertEquals("Buzz", getNumber(false, true, 5).fizzBuzz())
+    }
 
     private fun getNumber(three: Boolean, five: Boolean, multiplier: Int): Int {
         var num: Int = (Math.random() * 100).toInt()
         while(true) {
             val startNum = num
-            if(five && num%5!=0) num++
-            if(three && num%3!=0) num++
-            if(startNum == num) break;
+            if((three && num%3!=0)) num++
+            if((five && num%5!=0)) num++
+            if((!three && num%3==0)) num++
+            if((!five && num%5==0)) num++
+            if(startNum == num) break
         }
         return num * multiplier
     }
