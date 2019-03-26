@@ -19,6 +19,11 @@ class FizzBuzzTest: FizzBuzz {
         assertEquals("Buzz", getNumber(false, true, 5).fizzBuzz())
     }
 
+    @Test
+    fun `given multiple of five and three, returns FizzBuzz`() {
+        assertEquals("FizzBuzz", getNumber(false, false, 15).fizzBuzz())
+    }
+
     private fun getNumber(three: Boolean, five: Boolean, multiplier: Int): Int {
         var num: Int = (Math.random() * 100).toInt()
         while(true) {
