@@ -3,6 +3,7 @@ interface FizzBuzz {
 
 
     fun Int.fizzBuzz(): String {
-        return this.toString()
+        return if(this%3==0) "Fizz"
+        else this.toString()
     }
 }
