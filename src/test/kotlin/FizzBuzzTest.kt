@@ -6,7 +6,8 @@ class FizzBuzzTest: FizzBuzz {
 
     @Test
     fun `given one returns one`() {
-        assertEquals("1", 1.fizzBuzz())
+        val num = getNumber(false, false, 1)
+        assertEquals(num.toString(), num.fizzBuzz())
     }
 
     @Test
