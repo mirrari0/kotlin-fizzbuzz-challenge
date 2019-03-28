@@ -11,7 +11,7 @@ class FizzBuzzTest: FizzBuzz {
     }
 
     @Test
-    fun `given multiple of three not five, returns fizz`() {
+    fun `given multiple of three not five, returns fizz`() {    
         assertEquals("Fizz", getNumber(true, false, 3).fizzBuzz())
     }
 
