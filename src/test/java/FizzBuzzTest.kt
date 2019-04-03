@@ -21,6 +21,12 @@ class FizzBuzzTest: FizzBuzz {
         assertEquals("buzz", getNumber(false, true, 5).playGame())
     }
 
+    @Test
+    fun `when given a multiple of fifteen, returns fizzbuzz`() {
+        assertEquals("fizzbuzz", getNumber(true, true, 15).playGame())
+    }
+
+
 
 
     private fun getNumber(three: Boolean, five: Boolean, multiplier: Int): Int{
